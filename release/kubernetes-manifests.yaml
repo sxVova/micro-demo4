@@ -215,7 +215,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: gcr.io/google-samples/microservices-demo/frontend:v0.1.4
+          image: sxvova/test:frontend_0
           ports:
           - containerPort: 8080
           readinessProbe:
