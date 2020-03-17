@@ -215,7 +215,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: sxvova/test:frontend_0
+          image: gcr.io/devops-259416/frontend:3
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -307,7 +307,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.1.4
+        image: gcr.io/devops-259416/paymentservice:3
         ports:
         - containerPort: 50051
         env:
@@ -669,7 +669,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/google-samples/microservices-demo/adservice:v0.1.4
+        image: gcr.io/devops-259416/adservice:3
         ports:
         - containerPort: 9555
         env:
