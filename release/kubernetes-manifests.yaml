@@ -269,8 +269,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend
+  annotations:
+    cloud.google.com/app-protocols: '{"http":"HTTP"}'
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: frontend
   ports:
@@ -278,19 +280,22 @@ spec:
     port: 80
     targetPort: 8080
 ---
-apiVersion: v1
-kind: Service
+apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
-  name: frontend-external
+  name: my-mc-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "hipster"
 spec:
-  type: LoadBalancer
-  loadBalancerIP: 35.238.243.98
-  selector:
-    app: frontend
-  ports:
-  - name: http
-    port: 80
-    targetPort: 8080
+  tls:
+  - secretName: hipster-cert-tls
+  rules:
+  - host: hipster.sxvova.opensource-ukraine.org
+    http:
+      paths:
+      - backend:
+          serviceName: frontend
+          servicePort: http
 ---
 apiVersion: apps/v1
 kind: Deployment
