@@ -290,7 +290,7 @@ spec:
   tls:
   - secretName: hipster-cert-tls
   rules:
-  - host: hipster.sxvova.opensource-ukraine.org
+  - host: hipster-shop.sxvova.opensource-ukraine.org
     http:
       paths:
       - backend:
