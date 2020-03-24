@@ -32,7 +32,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/devops-259416/emailservice:v0.1.4
+        image: gcr.io/devops-259416/emailservice:4e0874e3
         ports:
         - containerPort: 8080
         env:
@@ -155,7 +155,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/devops-259416/recommendationservice:v0.1.4
+        image: gcr.io/devops-259416/recommendationservice:4e0874e3
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -215,7 +215,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: gcr.io/devops-259416/frontend:v0.1.4
+          image: gcr.io/devops-259416/frontend:4e0874e3
           ports:
           - containerPort: 8080
           readinessProbe:
@@ -313,7 +313,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/devops-259416/paymentservice:v0.1.4
+        image: gcr.io/devops-259416/paymentservice:4e0874e3
         ports:
         - containerPort: 50051
         env:
@@ -362,7 +362,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/devops-259416/productcatalogservice:v0.1.4
+        image: gcr.io/devops-259416/productcatalogservice:4e0874e3
         ports:
         - containerPort: 3550
         env:
@@ -479,7 +479,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: main
-        image: gcr.io/devops-259416/loadgenerator:v0.1.4
+        image: gcr.io/devops-259416/loadgenerator:4e0874e3
         env:
         - name: FRONTEND_ADDR
           value: "frontend:80"
@@ -564,7 +564,7 @@ spec:
     spec:
       containers:
       - name: server
-        image: gcr.io/devops-259416/shippingservice:v0.1.4
+        image: gcr.io/devops-259416/shippingservice:4e0874e3
         ports:
         - containerPort: 50051
         env:
