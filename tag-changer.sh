@@ -1,7 +1,7 @@
 #!/bin/bash
 TAG=$1
 #emailservice-changer
-#sed "s,\gcr.io/devops-259416/emailservice:..*,\gcr.io/devops-259416/emailservice:$TAG,g" -i release/kubernetes-manifests.yaml
+sed "s,\gcr.io/devops-259416/emailservice:..*,\gcr.io/devops-259416/emailservice:$TAG,g" -i release/kubernetes-manifests.yaml
 
 #checkoutservice-changer
 sed "s,\gcr.io/devops-259416/checkoutservice:..*,\gcr.io/devops-259416/checkoutservice:$TAG,g" -i release/kubernetes-manifests.yaml
@@ -25,7 +25,7 @@ sed "s,\gcr.io/devops-259416/cartservice:..*,\gcr.io/devops-259416/cartservice:$
 #sed "s,\gcr.io/devops-259416/loadgenerator:..*,\gcr.io/devops-259416/loadgenerator:$TAG,g" -i release/kubernetes-manifests.yaml
 
 #currencyservice-changer
-sed "s,\gcr.io/devops-259416/currencyservice:..*,\gcr.io/devops-259416/currencyservice:$TAG,g" -i release/kubernetes-manifests.yaml
+#sed "s,\gcr.io/devops-259416/currencyservice:..*,\gcr.io/devops-259416/currencyservice:$TAG,g" -i release/kubernetes-manifests.yaml
 
 #adservice-changer
 sed "s,\gcr.io/devops-259416/adservice:..*,\gcr.io/devops-259416/adservice:$TAG,g" -i release/kubernetes-manifests.yaml
