@@ -6,14 +6,14 @@ metadata:
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
-    email: '${EMAIL}'
+    email: ${USER_EMAIL}
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
     - selector: {}
       dns01:
         clouddns:
-           project: devops-259416
+           project: ${PROJECT_ID}
            serviceAccountSecretRef:
              name: k8s-service-account
              key: key.json
@@ -29,6 +29,6 @@ spec:
     kind: ClusterIssuer
     name: letsencrypt-prod
   dnsZones:
-  - sxvova
+  - ${DNS_ZONE}
   dnsNames:
-  - hipster-shop.sxvova.opensource-ukraine.org
+  - ${DNS_NAME}
