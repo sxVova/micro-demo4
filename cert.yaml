@@ -1,4 +1,3 @@
-EMAIL=volodymyr.skliar@nure.ua
 apiVersion: cert-manager.io/v1alpha2
 kind: ClusterIssuer
 metadata:
