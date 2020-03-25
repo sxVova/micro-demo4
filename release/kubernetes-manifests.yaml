@@ -209,7 +209,7 @@ spec:
   template:
     metadata:
       labels:
-        app: frontend"
+        app: frontend
     spec:
       containers:
         - name: server
