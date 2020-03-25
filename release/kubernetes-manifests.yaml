@@ -32,7 +32,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/devops-259416/emailservice:4e0874e3
+        image: gcr.io/devops-259416/emailservice:
         ports:
         - containerPort: 8080
         env:
@@ -501,7 +501,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gcr.io/devops-259416/currencyservice:v0.1.4
+        image: gcr.io/devops-259416/currencyservice:4e0874e3
         ports:
         - name: grpc
           containerPort: 7000
